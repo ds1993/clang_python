@@ -24,7 +24,7 @@ def dumpClass(node):
 Config.set_library_file("/usr/lib/llvm-3.4/lib/libclang-3.4.so")
 index = clang.cindex.Index.create()
 
-#the param 2 could put include dirs, like ["-Iinclude1", -Iinclude2]
+#the param 2 could put include dirs, like ["-Iinclude1", "-Iinclude2"]
 tu = index.parse(sys.argv[1])
 
 dumpClass(tu.cursor)
